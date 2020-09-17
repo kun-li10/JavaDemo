@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration status="WARN" monitorInterval="600">
+
+    <!--<Properties>-->
+    <!--<Property name="LOG_HOME">/log</Property>-->
+    <!--</Properties>-->
+    <!--<Appenders>-->
+    <!--<Console name="Console" target="SYSTEM_OUT">-->
+    <!--<ThresholdFilter level="trace" onMatch="ACCEPT" onMismatch="DENY"/>-->
+    <!--<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n"/>-->
+    <!--</Console>-->
+    <!--<RollingFile name="bdpms_info"-->
+    <!--immediateFlush="true" fileName="${LOG_HOME}/bdpms_info.log"-->
+    <!--filePattern="${LOG_HOME}/bdpms_info.%d{yyyy-MM-dd}.log.gz">-->
+    <!--<PatternLayout>-->
+    <!--<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %class{36} %L %M &#45;&#45; %msg%xEx%n</pattern>-->
+    <!--</PatternLayout>-->
+    <!--<Policies>-->
+    <!--<TimeBasedTriggeringPolicy interval="1" modulate="true" />-->
+    <!--&lt;!&ndash;<SizeBasedTriggeringPolicy size="300 MB"/>&ndash;&gt;-->
+    <!--</Policies>-->
+    <!--</RollingFile>-->
+    <!--<RollingFile name="schedule_master_info"-->
+    <!--immediateFlush="true" fileName="${LOG_HOME}/schedule_master_info.log"-->
+    <!--filePattern="${LOG_HOME}/schedule_master_info.%d{yyyy-MM-dd}.log.gz">-->
+    <!--<PatternLayout>-->
+    <!--<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %class{36} %L %M &#45;&#45; %msg%xEx%n</pattern>-->
+    <!--</PatternLayout>-->
+    <!--<Policies>-->
+    <!--<TimeBasedTriggeringPolicy interval="1" modulate="true" />-->
+    <!--&lt;!&ndash;<SizeBasedTriggeringPolicy size="300 MB"/>&ndash;&gt;-->
+    <!--</Policies>-->
+    <!--</RollingFile>-->
+    <!--<RollingFile name="schedule_slave_info"-->
+    <!--immediateFlush="true" fileName="${LOG_HOME}/schedule_slave_info.log"-->
+    <!--filePattern="${LOG_HOME}/schedule_slave_info.%d{yyyy-MM-dd}.log.gz">-->
+    <!--<PatternLayout>-->
+    <!--<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %class{36} %L %M &#45;&#45; %msg%xEx%n</pattern>-->
+    <!--</PatternLayout>-->
+    <!--<Policies>-->
+    <!--<TimeBasedTriggeringPolicy interval="1" modulate="true" />-->
+    <!--&lt;!&ndash;<SizeBasedTriggeringPolicy size="300 MB"/>&ndash;&gt;-->
+    <!--</Policies>-->
+    <!--</RollingFile>-->
+    <!--<RollingFile name="web_info"-->
+    <!--immediateFlush="true" fileName="${LOG_HOME}/web_info.log"-->
+    <!--filePattern="${LOG_HOME}/web_info.%d{yyyy-MM-dd}.log.gz">-->
+    <!--<PatternLayout>-->
+    <!--<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %class{36} %L %M &#45;&#45; %msg%xEx%n</pattern>-->
+    <!--</PatternLayout>-->
+    <!--<Policies>-->
+    <!--<TimeBasedTriggeringPolicy interval="1" modulate="true" />-->
+    <!--&lt;!&ndash;<SizeBasedTriggeringPolicy size="300 MB"/>&ndash;&gt;-->
+    <!--</Policies>-->
+    <!--</RollingFile>-->
+    <!--<RollingFile name="mybatis_info"-->
+    <!--immediateFlush="true" fileName="${LOG_HOME}/mybatis_info.log"-->
+    <!--filePattern="${LOG_HOME}/mybatis_info.%d{yyyy-MM-dd}.log.gz">-->
+
+    <!--<PatternLayout>-->
+    <!--<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %class{36} %L %M &#45;&#45; %msg%xEx%n</pattern>-->
+    <!--</PatternLayout>-->
+    <!--<Policies>-->
+    <!--<TimeBasedTriggeringPolicy interval="1" modulate="true" />-->
+    <!--&lt;!&ndash;<SizeBasedTriggeringPolicy size="300 MB"/>&ndash;&gt;-->
+    <!--</Policies>-->
+    <!--</RollingFile>-->
+
+    <!--<RollingFile name="oldjob_mapping_track"-->
+    <!--immediateFlush="true" fileName="${LOG_HOME}/oldjob_mapping_track.log"-->
+    <!--filePattern="${LOG_HOME}/oldjob_mapping_track.%d{yyyy-MM-dd}.log.gz">-->
+
+    <!--<PatternLayout>-->
+    <!--<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %class{36} %L %M &#45;&#45; %msg%xEx%n</pattern>-->
+    <!--</PatternLayout>-->
+    <!--<Policies>-->
+    <!--<TimeBasedTriggeringPolicy interval="1" modulate="true" />-->
+    <!--&lt;!&ndash;<SizeBasedTriggeringPolicy size="300 MB"/>&ndash;&gt;-->
+    <!--</Policies>-->
+    <!--</RollingFile>-->
+
+    <!--<RollingFile name="oldjob_mapping_service_track"-->
+    <!--immediateFlush="true" fileName="${LOG_HOME}/oldjob_mapping_service_track.log"-->
+    <!--filePattern="${LOG_HOME}/oldjob_mapping_service_track.%d{yyyy-MM-dd}.log.gz">-->
+
+    <!--<PatternLayout>-->
+    <!--<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %class{36} %L %M &#45;&#45; %msg%xEx%n</pattern>-->
+    <!--</PatternLayout>-->
+    <!--<Policies>-->
+    <!--<TimeBasedTriggeringPolicy interval="1" modulate="true" />-->
+    <!--&lt;!&ndash;<SizeBasedTriggeringPolicy size="300 MB"/>&ndash;&gt;-->
+    <!--</Policies>-->
+    <!--</RollingFile>-->
+    <!--</Appenders>-->
+
+    <!--<Loggers>-->
+    <!--<root level="error">-->
+    <!--<appender-ref ref="Console"/>-->
+    <!--</root>-->
+    <!--<logger name="com.taobao.zeus" level="info" additivity="false">-->
+    <!--<appender-ref ref="bdpms_info"/>-->
+    <!--</logger>-->
+
+    <!--<logger name="com.taobao.zeus.newmaster" level="info" additivity="false">-->
+    <!--<appender-ref ref="schedule_master_info"/>-->
+    <!--</logger>-->
+
+    <!--<logger name="com.taobao.zeus.newslave" level="info" additivity="false">-->
+    <!--<appender-ref ref="schedule_slave_info"/>-->
+    <!--</logger>-->
+
+    <!--<logger name="com.taobao.zeus.store.dao" level="debug" additivity="false">-->
+    <!--<appender-ref ref="mybatis_info"/>-->
+    <!--</logger>-->
+
+    <!--<logger name="com.taobao.zeus.web" level="info" additivity="false">-->
+    <!--<appender-ref ref="web_info"/>-->
+    <!--</logger>-->
+
+    <!--<logger name="com.taobao.zeus.newmaster.oldjobmapping" level="info" additivity="false">-->
+    <!--<appender-ref ref="oldjob_mapping_track"/>-->
+    <!--</logger>-->
+
+    <!--<logger name="com.taobao.zeus.store.service.BDPMSJobMappingServiceImpl" level="info" additivity="false">-->
+    <!--<appender-ref ref="oldjob_mapping_service_track"/>-->
+    <!--</logger>-->
+    <!--</Loggers>-->
+
+</Configuration>
