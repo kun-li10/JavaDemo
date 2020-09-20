@@ -1,4 +1,4 @@
-package com.jd.netAddress;
+package com.jd.socket.server;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

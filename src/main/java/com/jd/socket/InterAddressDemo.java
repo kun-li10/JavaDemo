@@ -1,4 +1,4 @@
-package com.jd.netAddress;
+package com.jd.socket;
 
 
 import java.net.InetAddress;

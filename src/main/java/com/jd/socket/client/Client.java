@@ -1,4 +1,4 @@
-package com.jd.netAddress;
+package com.jd.socket.client;
 
 import java.io.DataOutputStream;
 import java.io.IOException;
