@@ -1,12 +1,14 @@
 package com.jd.socket.client;
 
 import com.jd.socket.model.User;
+import sun.misc.Unsafe;
 
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 import java.net.Socket;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @author lk
