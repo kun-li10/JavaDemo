@@ -1,5 +1,6 @@
 package com.jd.validator;
 
+import com.jd.validator.annotion.IsUserName;
 import org.apache.commons.lang3.StringUtils;
 
 import javax.validation.ConstraintValidator;

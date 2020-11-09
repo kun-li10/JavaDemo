@@ -1,5 +1,7 @@
 package com.jd.threadPoolRejectHandle;
 
+import com.google.common.collect.Maps;
+
 import java.lang.annotation.Target;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ThreadFactory;
@@ -22,7 +24,8 @@ public class RejectHandleDemo {
 
     //测试AbortPolicy 丢弃任务并抛出异常
     public static void main(String[] args) {
-        ArrayBlockingQueue<Runnable> queue = new ArrayBlockingQueue<>(100);
+
+      ArrayBlockingQueue<Runnable> queue = new ArrayBlockingQueue<>(100);
         ThreadPoolExecutor poolExecutor = new ThreadPoolExecutor(5, 5, 0L, TimeUnit.SECONDS, queue,
                 new ThreadFactory() {
                     @Override

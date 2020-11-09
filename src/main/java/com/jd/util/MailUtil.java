@@ -13,7 +13,6 @@ import org.springframework.stereotype.Component;
 import javax.mail.internet.MimeMessage;
 import java.io.File;
 
-@Component
 @Slf4j
 public class MailUtil {
 

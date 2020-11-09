@@ -19,7 +19,7 @@ import java.util.stream.Stream;
 public class StreamFlatMap {
 
     public static void main(String[] args) throws IOException {
-        //io 筛选符合条件的字段 flatMap关键
+        //SystemIOTest 筛选符合条件的字段 flatMap关键
         String dirPath = "D:\\file";
         String filePath = dirPath + "\\test.txt";
         File file = new File(dirPath);

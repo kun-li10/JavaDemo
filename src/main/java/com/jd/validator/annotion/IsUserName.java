@@ -1,4 +1,6 @@
-package com.jd.validator;
+package com.jd.validator.annotion;
+
+import com.jd.validator.IsUserNameValidator;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;

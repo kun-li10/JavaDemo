@@ -29,8 +29,22 @@
     <swagger.version>2.9.2</swagger.version>
     <aspectj.version>1.9.1</aspectj.version>
     <hutool.version>5.4.2</hutool.version>
+    <zookeeper.version>3.6.0</zookeeper.version>
   </properties>
   <dependencies>
+    <!--添加zookeeper-->
+    <dependency>
+      <groupId>org.apache.zookeeper</groupId>
+      <artifactId>zookeeper</artifactId>
+      <version>${zookeeper.version}</version>
+      <type>jar</type>
+      <exclusions>
+        <exclusion>
+          <artifactId>log4j</artifactId>
+          <groupId>log4j</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
     <!--Hutool-->
     <dependency>
       <groupId>cn.hutool</groupId>
@@ -223,6 +237,26 @@
       <groupId>org.aspectj</groupId>
       <artifactId>aspectjrt</artifactId>
       <version>${aspectj.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>cglib</groupId>
+      <artifactId>cglib</artifactId>
+      <version>3.3.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>1.9.5</version>
+    </dependency>
+    <dependency>
+      <groupId>aopalliance</groupId>
+      <artifactId>aopalliance</artifactId>
+      <version>1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-aspects</artifactId>
+      <version>5.2.3.RELEASE</version>
     </dependency>
   </dependencies>
 

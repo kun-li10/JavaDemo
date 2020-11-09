@@ -13,10 +13,8 @@ public class OptionalTest {
         String name = "likun";
         Person person = new Person();
         Optional.ofNullable(name).ifPresent(newName -> System.out.println(newName));
-        Optional.ofNullable(name).ifPresent(name1 -> {
-            person.setName(name1);
-        });
-        System.out.println(person);
+        Optional.ofNullable(name).ifPresent(person::setName);
+        System.out.println(person.getName());
 
         String like = null;
 //        like = Optional.ofNullable(like).orElse("值为空");

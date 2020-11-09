@@ -21,8 +21,9 @@ public class T01_Future {
         });
 
         int i = future.get();
-
         System.out.println(i);
+        //关闭线程池
+        service.shutdown();
     }
 
 }
