@@ -5,6 +5,8 @@
     <file url="file://$PROJECT_DIR$/src/main/java/com/jd/avg/AvgTest.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/jd/c_027_future_to_loom/T01_Future.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/jd/c_027_future_to_loom/T02_ListenableFuture.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/jd/future/original/T02_ListenableFuture.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/jd/future/original/T06_01_CompletableFuture.java" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
