@@ -26,6 +26,6 @@ public class BalanceTree {
     if (Math.abs(left - right) > 1) {
       balance = false;
     }
-    return (right > left) ? right + 1 : left + 1;
+    return (right > left) ? right + 1 : left;
   }
 }

@@ -15,7 +15,7 @@ public class BalanceSolution {
     }
     int leftLength = depth(root.left);
     int rightLength = depth(root.right);
-    if (Math.abs(leftLength = rightLength) < 1) {
+    if (Math.abs(leftLength - rightLength) < 1) {
       return true;
     }
     boolean booleft = isBalanceSolution(root.left);
@@ -29,6 +29,6 @@ public class BalanceSolution {
     }
     int left = depth(root.left);
     int right = depth(root.right);
-    return left > right ? left + 1 : right + 1;
+    return left > right ? left + 1 : right;
   }
 }
