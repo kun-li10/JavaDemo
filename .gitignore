@@ -31,6 +31,8 @@ hs_err_pid*
 # Log file
 *.log
 
+*.iml
+
 # BlueJ files
 *.ctxt
 
