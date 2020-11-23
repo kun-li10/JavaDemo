@@ -1,4 +1,4 @@
-package com.algorithm.TreeDemo;
+package com.algorithm.Tree;
 
 /**
  * 判断平衡二叉树 使用全局Boolean,判断平衡二叉树
@@ -25,6 +25,6 @@ public class BalanceTreeBoolean {
     if (Math.abs(leftLen - rightLen) > 1) {
       isBoolean = false;
     }
-    return leftLen > rightLen ? leftLen + 1 : rightLen;
+    return leftLen > rightLen ? leftLen + 1 : rightLen + 1;
   }
 }

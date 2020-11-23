@@ -1,0 +1,101 @@
+{
+  "taskCode": "00001505",
+  "type": "1",
+  "accessType": "1",
+  "dataSourceDbModel": {
+    "dbId": "1308948043149352962",
+    "dataSourceType": "3",
+    "dbName": "bdetl",
+    "username": "OYHMFDhiXnI1RQeG0VAPSGQpTiRNiwi7Uo+Sqz/JnIh2Yqv2uNRlKR9BH5UiXQHfoLvxTOZUSpo1BuokScaZjE+aUJCg0IggDTIMCDT2GpicC3YpHwAGEX/XBjZTLf3KB3tCFOoViVXs0FcrQTccdINPo1+lM2k8AJHrfh1P+Sc=",
+    "password": "Wax5kcOTCq+8V16QXhYvStR9LZiCaUotzD+CvZohKzOTeX7J2g/n9pSxim4Jt1/xbpLOIRak2tMuK2RKktmwwYmeqQVXQDf3OD1EtnPUYsjorGB9AEKhZ5YKJVs2MlJMstJqbJ+x7qWl+BYXut7fQ1SZFzYM46gZT6TkPU2iAFM=",
+    "jdbcUrl": "jdbc:mysql://172.17.26.201:3306"
+  },
+  "dataSourceTableModel": [
+    {
+      "tableName": "kejing_hongbao_one_$(ct.add(-3).get())",
+      "tableId": "1281469523835855301",
+      "dbId": "1308948043149352962",
+      "dbName": "bdetl"
+    },
+    {
+      "tableName": "kejing_hongbao_one_$(ct.add(-2).get())",
+      "tableId": "1281469523835855301",
+      "dbId": "1308948043149352962",
+      "dbName": "bdetl"
+    }
+  ],
+  "dataSourceColumnModelList": [
+    {
+      "id": "1281469529662023344",
+      "columnName": "ID",
+      "columnNameCn": null,
+      "columnDesc": null,
+      "columnType": "bigint",
+      "tableId": "1281469523835855301",
+      "cdId": "null",
+      "isPartition": 0,
+      "columnIndex": null,
+      "isPrimaryKey": 1
+    },
+    {
+      "id": "1281469529662023345",
+      "columnName": "NAME",
+      "columnNameCn": null,
+      "columnDesc": null,
+      "columnType": "varchar",
+      "tableId": "1281469523835855301",
+      "cdId": "null",
+      "isPartition": 0,
+      "columnIndex": null,
+      "isPrimaryKey": 0
+    }
+  ],
+  "dataTargetDbModel": {
+    "dbId": null,
+    "dataSourceType": "1",
+    "dbName": "mxd",
+    "username": null,
+    "password": null,
+    "jdbcUrl": null
+  },
+  "dataTargetTableModel": {
+    "tableName": "test_table",
+    "tableId": null,
+    "dbId": null,
+    "dbName": null
+  },
+  "dataTargetColumnModelList": [
+    {
+      "id": "1281469529662053838",
+      "columnName": "id",
+      "columnNameCn": "",
+      "columnDesc": "null",
+      "columnType": "string",
+      "tableId": "1281469523835855762",
+      "cdId": "null",
+      "isPartition": 0,
+      "columnIndex": 0,
+      "isPrimaryKey": 0
+    },
+    {
+      "id": "1281469529662053839",
+      "columnName": "name",
+      "columnNameCn": "",
+      "columnDesc": "null",
+      "columnType": "string",
+      "tableId": "1281469523835855762",
+      "cdId": "null",
+      "isPartition": 0,
+      "columnIndex": 1,
+      "isPrimaryKey": 0
+    }
+  ],
+  "incrementColumn": null,
+  "whereSql": "",
+  "executionDate": "20201119000000",
+  "decryptKeyList": [
+    "dataSourceDbModel.username",
+    "dataSourceDbModel.password"
+  ],
+  "dataFlow": "mysql_hive"
+}
