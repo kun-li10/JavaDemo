@@ -10,15 +10,19 @@ package com.jd.avg;
  */
 public class AvgTest {
 
-	public static void main(String[] args) {
-		int a = 3;
-		int b = 5;
-		//商加上取余均值
-		int avg = a / 2 + b / 2 + (a % 2 + b % 2) / 2;
-		System.out.println("取余:" + avg);
+  public static void main(String[] args) {
+    int a = 3;
+    int b = 5;
+    //商加上取余均值
+    int avg = a / 2 + b / 2 + (a % 2 + b % 2) / 2;
+    System.out.println("取余:" + avg);
 
-		//通过位运算
-		int avg2 = (a >> 1) + (b >> 1) + (((a & 2) + (b & 2)) >> 1);
-		System.out.println("位运算:" + avg2);
-	}
+    //通过位运算
+    int avg2 = (a >> 1) + (b >> 1) + (((a & 2) + (b & 2)) >> 1);
+    System.out.println("位运算:" + avg2);
+
+    //avg
+    int avg3 = ((b - a) >> 1) + a;
+    System.out.println("平均值: " + avg3);
+  }
 }

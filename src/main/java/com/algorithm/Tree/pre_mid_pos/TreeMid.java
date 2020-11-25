@@ -2,6 +2,7 @@ package com.algorithm.Tree.pre_mid_pos;
 
 import com.algorithm.Tree.TreeNode;
 
+import java.util.LinkedList;
 import java.util.Stack;
 
 /**
@@ -45,6 +46,24 @@ public class TreeMid {
         System.out.println(node.value);
         pNode = node.right;
       }
+    }
+  }
+
+  /**
+   * 官方解题
+   * @param root
+   */
+  public void mid2(TreeNode root) {
+    LinkedList<TreeNode> stack = new LinkedList<>();
+    TreeNode pNode = root;
+    while (pNode != null || !stack.isEmpty()) {
+      while (pNode != null) {
+        stack.push(pNode);
+        pNode = pNode.left;
+      }
+      TreeNode node = stack.pop();
+      System.out.println(node.value);
+      pNode = node.right;
     }
   }
 }

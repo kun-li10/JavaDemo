@@ -1,4 +1,6 @@
-/** 代码不好维护 */
+/**
+ * 代码不好维护
+ */
 package com.jd.c_027_future_to_loom;
 
 import cn.hutool.core.thread.RejectPolicy;
@@ -33,6 +35,9 @@ public class T02_ListenableFuture {
           }
         }, new ThreadPoolExecutor.CallerRunsPolicy());
 
+    /**
+     * 创建ListeningExcutor
+     */
     ListeningExecutorService service =
         MoreExecutors.listeningDecorator(poolExecutor);
 
@@ -46,21 +51,18 @@ public class T02_ListenableFuture {
               }
             });
 
-    Futures.addCallback(
-        future,
-        new FutureCallback<Integer>() {
-          @Override
-          public void onSuccess(Integer integer) {
-            System.out.println(integer);
-          }
+    Futures.addCallback(future, new FutureCallback<Integer>() {
+      @Override
+      public void onSuccess(Integer integer) {
+        System.out.println(integer);
+      }
 
-          @Override
-          public void onFailure(Throwable throwable) {
-            System.out.println("onFailure!");
-            throwable.printStackTrace();
-          }
-        },
-        service);
+      @Override
+      public void onFailure(Throwable throwable) {
+        System.out.println("onFailure!");
+        throwable.printStackTrace();
+      }
+    }, service);
 
     service.shutdown();
   }

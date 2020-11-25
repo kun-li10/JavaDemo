@@ -2,6 +2,7 @@ package com.algorithm.Tree.pre_mid_pos;
 
 import com.algorithm.Tree.TreeNode;
 
+import java.util.LinkedList;
 import java.util.Stack;
 
 /**
@@ -48,6 +49,28 @@ public class TreePre {
         TreeNode node = stack.pop();
         //开始遍历右子树
         pNode = node.right;
+      }
+    }
+  }
+
+  /**
+   * 更容易理解
+   * 1.先把右节点压入栈低，左节点紧跟压入
+   * 2.每次获取栈顶的元素,肯定是各个节点左树先处理
+   * @param root
+   */
+  public void prNotRecursion2(TreeNode root) {
+    LinkedList<TreeNode> stack = new LinkedList<>();
+    stack.add(root);
+    while (!stack.isEmpty()) {
+      //获取尾部
+      TreeNode node = stack.pollLast();
+      System.out.println(node.value);
+      if (node.right != null) {
+        stack.add(node.right);
+      }
+      if (node.left != null) {
+        stack.add(node.left);
       }
     }
   }

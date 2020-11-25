@@ -17,7 +17,7 @@ public class TransferQueueTest {
 		new Thread(()->{
 			try {
 				for (int i = 0, size = num.length; i < size; i++) {
-					transferQueue.transfer(num[i]);
+          transferQueue.transfer(num[i]);
 					System.out.print(transferQueue.take());
 				}
 			}catch (Exception e){
@@ -28,9 +28,9 @@ public class TransferQueueTest {
 		new Thread(()->{
 			try{
 				for (int j =0,size=enl.length;j<size;j++){
-					System.out.print(transferQueue.take());
-					transferQueue.transfer(enl[j]);
-				}
+          System.out.print(transferQueue.take());
+          transferQueue.transfer(enl[j]);
+        }
 			}catch (Exception e){
 				e.printStackTrace();
 			}
