@@ -10,7 +10,9 @@ import java.util.function.Supplier;
  * @date 2020/9/22 20:59
  */
 public class Origien {
-  public static void main(String[] args) {
+
+
+  public void test(){
 
     /** 定义函数式接口 String -> 参数 Integer -> 接收的参数 */
     Function<String, Integer> fun =

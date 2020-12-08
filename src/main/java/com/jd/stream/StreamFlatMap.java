@@ -29,7 +29,8 @@ public class StreamFlatMap {
         for (int i = 0; i < 10; i++) {
             fileWriter.write(i + UUID.randomUUID().toString() + "\r\n");
         }
-        fileWriter.flush(); //刷新
+        //刷新,把kernel中的pagecache刷新到磁盘,尽量当时数据丢失
+        fileWriter.flush();
         if (fileWriter != null)
             fileWriter.close();
         BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath));

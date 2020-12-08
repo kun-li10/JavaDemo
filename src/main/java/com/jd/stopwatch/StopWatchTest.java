@@ -1,6 +1,7 @@
 package com.jd.stopwatch;
 
-import cn.hutool.core.date.StopWatch;
+
+import org.springframework.util.StopWatch;
 
 import java.util.stream.IntStream;
 
@@ -16,11 +17,11 @@ public class StopWatchTest {
   public static void main(String[] args) {
     StopWatch stopWatch = new StopWatch("ForchDemo");
     stopWatch.start("test1");
-    IntStream.rangeClosed(0, 100000).forEach(System.out::print);
+    IntStream.rangeClosed(0, 1).forEach(System.out::println);
     stopWatch.stop();
 
     stopWatch.start("test2");
-    IntStream.rangeClosed(0, 1000000).forEach(System.out::print);
+    IntStream.rangeClosed(0, 1).forEach(System.out::print);
     stopWatch.stop();
 
     System.out.println("\n所有统计:" + stopWatch.prettyPrint());

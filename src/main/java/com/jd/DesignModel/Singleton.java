@@ -3,7 +3,6 @@ package com.jd.DesignModel;
 /**
  * 单例设计模式
  * 首先保证构造私有
- *
  * @Author lk
  * @Date 2020/3/30 21:55
  * @Version 1.0
@@ -44,7 +43,7 @@ public class Singleton {
         return singleton3;
     }
 
-    //第二种
+    //第二种 防止指令重排 可见性 不能保证原子性
     private static volatile Singleton singleton4 = null;
 
     //私有构造同上
@@ -71,7 +70,11 @@ public class Singleton {
 }
 
 //-------------------枚举实现-----------------------
-//不仅防止线程同步,还能避免反序列化(最完美,enum没有构造,就是拿到class文件也无法通过反射创建实例)
+
+/**
+ * 不仅防止线程同步,还能避免反序列化(最完美,enum没有构造,就是拿到class文件也无法通过反射创建实例)
+ * 默认都是static final。所以loadClass时准备阶段就会默认值
+ */
 enum Singleton2 {
     INSTANCE;
 

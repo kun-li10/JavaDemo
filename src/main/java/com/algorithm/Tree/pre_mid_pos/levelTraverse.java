@@ -47,4 +47,5 @@ public class levelTraverse {
     System.out.println("PULL:" + list.poll());
     System.out.println(list);
   }
+
 }
