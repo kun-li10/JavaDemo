@@ -15,6 +15,7 @@ public class TreeTest {
 
   /**
    * 前序
+   *
    * @param root
    * @return
    */
@@ -40,6 +41,7 @@ public class TreeTest {
 
   /**
    * 中序
+   *
    * @param root
    * @return
    */
@@ -51,7 +53,7 @@ public class TreeTest {
     }
     TreeNode pNode = root;
     while (pNode != null || !stack.empty()) {
-      while (pNode.left != null) {
+      while (pNode != null) {
         stack.push(pNode);
         pNode = pNode.left;
       }
@@ -64,6 +66,7 @@ public class TreeTest {
 
   /**
    * 后徐
+   *
    * @param root
    * @return
    */
@@ -88,24 +91,25 @@ public class TreeTest {
   }
 
   /**
-   * 水皮遍历
+   * 水平遍历
+   *
    * @param root
    * @return
    */
-  static LinkedList<String> levelRecusion(TreeNode root){
+  static LinkedList<String> levelRecusion(TreeNode root) {
     LinkedList<String> list = new LinkedList<>();
     LinkedList<TreeNode> nodes = new LinkedList<>();
-    if (Objects.isNull(root)){
+    if (Objects.isNull(root)) {
       return list;
     }
     nodes.add(root);
-    while (!nodes.isEmpty()){
+    while (!nodes.isEmpty()) {
       TreeNode node = nodes.poll();
       list.add(node.value);
-      if (node.left!=null){
+      if (node.left != null) {
         nodes.push(node.left);
       }
-      if (node.right!=null){
+      if (node.right != null) {
         nodes.push(node.right);
       }
     }

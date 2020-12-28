@@ -1,8 +1,12 @@
 package com.algorithm.Tree.pre_mid_pos;
 
 import com.algorithm.Tree.TreeNode;
+import com.google.common.collect.Lists;
+import sun.reflect.generics.tree.Tree;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 /**
  * 树的后续遍历
@@ -48,5 +52,22 @@ public class TreePost {
         stack.add(pNode.right);
       }
     }
+  }
+
+  public LinkedList<String> postT(TreeNode root) {
+    LinkedList<TreeNode> stack = new LinkedList<>();
+    LinkedList<String> list = new LinkedList<>();
+    stack.push(root);
+    while (!stack.isEmpty()) {
+      TreeNode node = stack.poll();
+      list.addFirst(node.value);
+      if (node.left != null) {
+        stack.push(node.left);
+      }
+      if (node.right != null) {
+        stack.push(node.right);
+      }
+    }
+    return list;
   }
 }

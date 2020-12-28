@@ -55,7 +55,7 @@
       <artifactId>hutool-all</artifactId>
       <version>${hutool.version}</version>
     </dependency>
-    
+
     <!--JMH-->
     <!-- https://mvnrepository.com/artifact/org.openjdk.jmh/jmh-core -->
     <dependency>
@@ -261,6 +261,25 @@
       <groupId>org.springframework</groupId>
       <artifactId>spring-aspects</artifactId>
       <version>5.2.3.RELEASE</version>
+    </dependency>
+
+    <!--Orika copy-->
+    <dependency>
+      <groupId>ma.glasnost.orika</groupId>
+      <artifactId>orika-core</artifactId>
+      <version>1.5.4</version>
+    </dependency>
+    <!--mapstruct copy-->
+    <dependency>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct-jdk8</artifactId>
+      <version>1.3.0.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct-processor</artifactId>
+      <version>1.3.0.Final</version>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
 

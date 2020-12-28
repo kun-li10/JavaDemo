@@ -1,8 +1,11 @@
 package com.algorithm.Tree.pre_mid_pos;
 
 import com.algorithm.Tree.TreeNode;
+import com.google.common.collect.Lists;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Stack;
 
 /**
@@ -51,6 +54,7 @@ public class TreeMid {
 
   /**
    * 官方解题
+   *
    * @param root
    */
   public void mid2(TreeNode root) {
@@ -65,5 +69,27 @@ public class TreeMid {
       System.out.println(node.value);
       pNode = node.right;
     }
+  }
+
+  /**
+   * 左根右
+   *
+   * @param root
+   * @return
+   */
+  public List<String> midRecurice(TreeNode root) {
+    LinkedList<TreeNode> stack = new LinkedList<>();
+    ArrayList<String> list = Lists.newArrayList();
+    TreeNode pNode = root;
+    while (pNode != null || !stack.isEmpty()) {
+      while (pNode != null) {
+        stack.push(pNode);
+        pNode = pNode.left;
+      }
+      TreeNode node = stack.poll();
+      list.add(node.value);
+      pNode = pNode.right;
+    }
+    return list;
   }
 }
